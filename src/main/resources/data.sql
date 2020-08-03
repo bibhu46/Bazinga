@@ -1,7 +1,7 @@
-insert into product (name, price) values('shirt',2000);
-insert into product (name, price) values('jeans',4000);
-insert into product (name, price) values('bagpack',1200);
-insert into product (name, price) values('belt',340);
-insert into product (name, price) values('sunglasses',1000);
-insert into product (name, price) values('shoes',7000);
-insert into product (name, price) values('watch',1300);
+insert into product (name, price, quantity) values('shirt',2000, 50);
+insert into product (name, price, quantity) values('jeans',4000, 50);
+insert into product (name, price, quantity) values('bagpack',1200, 50);
+insert into product (name, price, quantity) values('belt',340, 50);
+insert into product (name, price, quantity) values('sunglasses',1000, 50);
+insert into product (name, price, quantity) values('shoes',7000, 50);
+insert into product (name, price, quantity) values('watch',1300, 50);

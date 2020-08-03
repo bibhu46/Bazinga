@@ -23,6 +23,11 @@ public class Cart {
 	@Column
 	private double price;
 	
+	
+	public Cart() {
+		
+	}
+	
 	public Cart(String productName, int productId, int quantity, double price) {
 		super();
 		this.productName = productName;
@@ -31,6 +36,7 @@ public class Cart {
 		this.price = price;
 		
 	}
+
 	public int getItemNo() {
 		return itemNo;
 	}

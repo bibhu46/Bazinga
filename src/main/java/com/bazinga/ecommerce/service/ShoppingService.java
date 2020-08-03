@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.bazinga.ecommerce.exception.ProductNotFoundException;
 import com.bazinga.ecommerce.model.Cart;
@@ -45,12 +46,20 @@ public class ShoppingService {
 
 	}
 	
+	public List<Cart> viewCart() {
+		return cartRepo.findAll();
+	}
+	
+	@Transactional
 	public Product updateQuantityInCart(int productId, int quantity) {
 		cartRepo.updateQuantity(productId, quantity);
+		Optional<Product> prd = productRepo.findById(productId);
+		
 		Product p = new Product();
 		p.setProductId(productId);
 		p.setName(cartRepo.findById(productId).get().getProductName());
 		p.setQuantity(cartRepo.findById(productId).get().getQuantity());
+		p.setPrice(prd.get().getPrice()*quantity);
 		return p;
 		}
 	}
