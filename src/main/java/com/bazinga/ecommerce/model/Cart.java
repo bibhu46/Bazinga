@@ -23,9 +23,8 @@ public class Cart {
 	@Column
 	private double price;
 	
-	public Cart(int itemNo, String productName, int productId, int quantity, double price) {
+	public Cart(String productName, int productId, int quantity, double price) {
 		super();
-		this.itemNo = itemNo;
 		this.productName = productName;
 		this.productId = productId;
 		this.quantity = quantity;

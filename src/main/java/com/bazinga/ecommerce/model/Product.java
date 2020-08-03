@@ -18,7 +18,16 @@ public class Product {
 	private String name;
 	@Column
 	private double price;
+	@Column
+	private int quantity;
 	
+	
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 	public int getProductId() {
 		return productId;
 	}
